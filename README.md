@@ -5,7 +5,7 @@ https://public.tableau.com/views/terremotos_17880080596350/Dashboard1?:language=
 
 Este proyecto es un cuadro de mando interactivo diseñado en Tableau para analizar la localización, el historial y la frecuencia de los terremotos en el sur de la Península Ibérica y la zona de Alborán. El proyecto trabaja con una base de datos de 87.420 terremotos registrados desde el año 1406 hasta agosto de 2026, acotados en las coordenadas de latitud 35°–38°N y longitud 0°–19°O.
 
-Mediante la limpieza y unificación de las localidades en Tableau (para agrupar nombres y quitar tildes o direcciones como Norte/Sur/Este), el trabajo se organiza en tres secciones:
+Mediante la limpieza de datos, la unificación toponímica de localidades en Tableau y la homogeneización matemática de magnitudes, el trabajo se organiza en tres secciones:
 
 1. Mapa de Terremotos: Muestra la ubicación exacta de los epicentros sobre el mapa para ver qué zonas concentran más actividad.
         
@@ -14,43 +14,29 @@ Mediante la limpieza y unificación de las localidades en Tableau (para agrupar 
         
 
 3.  Tabla por Localidad: Una lista detallada con un buscador integrado para consultar en qué municipios ha temblado, qué magnitudes han tenido y cuántos terremotos se han producido en cada uno.
-        
 
+---        
+## Principales Conclusiones del Estudio
 
-## Consideraciones sobre la Fuente y Calidad de los Datos
-El conjunto de datos proviene del catálogo oficial del Instituto Geográfico Nacional (IGN), con registros históricos que datan desde el año 1406. No obstante, se deben considerar las siguientes particularidades metodológicas:
-1. Heterogeneidad en la Medición (Magnitud vs. Intensidad): Las mediciones instrumentales de magnitud no se incorporaron al catálogo de forma sistemática hasta aproximadamente 1910. Por ello, los eventos anteriores a esta fecha carecen de un valor de magnitud homogéneo, estando caracterizados principalmente por su escalas de intensidad macrosísmica (daños observados).
-2. Variabilidad en las Escalas de Magnitud: A lo largo de la serie temporal, el IGN ha empleado diversas funciones de cálculo y escalas de magnitud ($m_b$, $M_w$, $m_{bLg}$, etc.) en función de la tecnología y normativa vigente en cada época. Esta variabilidad metodológica implica que los valores de magnitud deben interpretarse dentro del contexto instrumental de su periodo correspondiente.
+El análisis econométrico y de series temporales revela que el incremento observado en el recuento de sismos a lo largo del tiempo se debe a **un aumento en la frecuencia de detección (volumen) por mejoras tecnológicas y no a un incremento en la peligrosidad tectónica real**.
 
-## Análisis Estadístico y Conclusiones del Estudio
-El análisis econométrico y de tendencias temporales revela que el incremento observado en el recuento de sismos se debe a un aumento en la frecuencia de detección (volumen) y no a un incremento en la severidad (magnitud) de los eventos.
+* **Proceso de Homogeneización ($M_w$):** Al unificar las 15 metodologías históricas del IGN a la escala de **Magnitud Momento ($M_w$)**, la curva de tendencia se estabiliza, alcanzando un coeficiente de determinación del **$R^2 = 95{,}27\%$**.
 
-### 1.Tendencia General (Todos los rangos de magnitud combinados)
+* **Evolución Tecnológica ($M_c$):** La capacidad de detección ha mejorado drásticamente. En la era digital moderna (2002–2026), el **$97{,}3\%$ de los eventos registrados corresponden a microterremotos ($M_w < 4.0$)**, los cuales antes pasaban desapercibidos por la red de instrumentos.
+---
 
-La serie histórica global muestra un ajuste exponencial casi perfecto respecto al tiempo: $$\text{Recuento} = 8{,}973 \times 10^{-64} \cdot e^{0{,}0758416 \cdot \text{Año}}$$ 
+## Estructura de la Documentación Técnica
 
-- Bondad de ajuste ($R^2$): $0{,}953$ (explica el $95.3\%$ de la varianza histórica).
+Para profundizar en la metodología aplicada, puedes consultar los documentos específicos:
 
-- Significatividad ($p\text{-valor}$): $< 0{,}0001$ (estadísticamente significativo al $99{,}9\%$).
-
-### 2. Desglose por Niveles de Magnitud
-
-- Sismos leves o no instrumentados ($M < 4$ o sin dato específico): Presentan una aceleración exponencial pronunciada en la curva de registro ($\text{Recuento} = 7{,}8527 \times 10^{-71} \cdot e^{0{,}0839 \cdot \text{Año}}$, $R^2 = 0{,}949$, $p < 0{,}0001$). Esto responde principalmente a la mejora de la red sísmica local e instalación de más sismógrafos en las últimas décadas, capturando microterremotos que antes pasaban desapercibidos.
-
-- Sismos moderados y mayor severidad ($M \ge 4$): El crecimiento temporal es significativamente más moderado ($\text{Recuento} = 3{,}0408 \times 10^{-26} \cdot e^{0{,}0309 \cdot \text{Año}}$, $R^2 = 0{,}598$, $p < 0{,}0001$).
-
-- Conclusión Principal: Existe una mayor tasa de registro de eventos sísmicos impulsada por la densidad tecnológica de detección actual. El fenómeno responde a un incremento en el volumen de datos capturados (mayor resolución de medición) y no a una intensificación en la magnitud media de la actividad tectónica.
-
-
+*  **[Homogeneización de Magnitudes a Escala ](homogeneizacion.md):** Detalle de las ecuaciones de conversión de Cabañas et al. (2015), tabla de códigos del IGN y comparativa del modelo estadístico antes vs. después de homogeneizar.
+*  **[Análisis de Compleción del Catálogo ](analisis_complecion.md):** Evaluación del umbral de completitud ($M_c$) por eras tecnológicas de la red del IGN.
 
 ## Líneas de Trabajo Futuras y Próximos Pasos
 
 Para evolucionar este estudio en fases posteriores, se proponen las siguientes mejoras técnicas:
 
-
 - Mapeo por Escala de Intensidad (EMS-98 / MSK): Diseñar una capa de visualización geográfica basada en la intensidad sísmica percibida en superficie para complementar la magnitud en aquellos terremotos históricos anteriores a 1910.
-
-- Análisis de Compleción del Catálogo ($M_c$): Estimar el umbral de completitud (Magnitud de Compleción) para determinar a partir de qué magnitud el catálogo se considera $100\%$ completo en cada época histórica.
 
 - Filtro Estacional y De-clustering (Eliminación de Réplicas): Aplicar algoritmos de declustering (ej. método de Gardner-Knopoff) para separar los enjambres sísmicos y réplicas del flujo de sismicidad principal de fondo.
 
