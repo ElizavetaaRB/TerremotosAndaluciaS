@@ -1,7 +1,7 @@
 # TerremotosAndaluciaS
 Análisis Histórico de la Sismicidad en el Sur de Andalucía y Mar de Alborán (1406 – 2026)
 
-https://public.tableau.com/views/terremotos_17880080596350/Dashboard1?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+[https://public.tableau.com/views/terremotos_17880080596350/Dashboard1?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link](https://public.tableau.com/app/profile/elizaveta.rb/viz/terremotos_17880080596350/)
 
 Este proyecto analiza la localización, el historial y la frecuencia de los terremotos en el sur de la Península Ibérica y la zona del Mar de Alborán (coordenadas $35^\circ\text{--}38^\circ\text{N}$ y $0^\circ\text{--}19^\circ\text{O}$). El estudio trabaja con el catálogo oficial del **Instituto Geográfico Nacional (IGN)**, procesando un total de **87.420 registros sísmicos** desde el año 1406 hasta agosto de 2026.
 
