@@ -8,17 +8,13 @@ Este proyecto es un cuadro de mando interactivo diseñado en Tableau para analiz
 Mediante la limpieza y unificación de las localidades en Tableau (para agrupar nombres y quitar tildes o direcciones como Norte/Sur/Este), el trabajo se organiza en tres secciones:
 
 1. Mapa de Terremotos: Muestra la ubicación exacta de los epicentros sobre el mapa para ver qué zonas concentran más actividad.
-
-   <div class='tableauPlaceholder' id='viz1788011072575' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;te&#47;terremotos_17880080596350&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='terremotos_17880080596350&#47;Dashboard1' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;te&#47;terremotos_17880080596350&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /></object></div>                
+        
 
 2.  Cantidad de Terremotos por Año: Una línea del tiempo que permite ver la evolución histórica y detectar en qué años ha habido más enjambres sísmicos.
-
-
-  <div class='tableauPlaceholder' id='viz1788011245484' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;76&#47;76S4K6Z48&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;76S4K6Z48' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;76&#47;76S4K6Z48&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /></object></div>                
+        
 
 3.  Tabla por Localidad: Una lista detallada con un buscador integrado para consultar en qué municipios ha temblado, qué magnitudes han tenido y cuántos terremotos se han producido en cada uno.
-
-<div class='tableauPlaceholder' id='viz1788011484712' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;te&#47;terremotos_17880080596350&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='terremotos_17880080596350&#47;Dashboard3' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;te&#47;terremotos_17880080596350&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /></object></div>                
+        
 
 
 ## Consideraciones sobre la Fuente y Calidad de los Datos
@@ -51,7 +47,6 @@ Conclusión Principal: Existe una mayor tasa de registro de eventos sísmicos im
 
 Para evolucionar este estudio en fases posteriores, se proponen las siguientes mejoras técnicas:
 
-- Homogeneización de Escalas de Magnitud: Desarrollar un modelo de conversión/normalización que unifique las distintas métricas históricas del IGN ($m_b$, $M_w$, etc.) a una única escala estándar ($M_w$), reduciendo la dispersión en las comparativas temporales.
 
 - Mapeo por Escala de Intensidad (EMS-98 / MSK): Diseñar una capa de visualización geográfica basada en la intensidad sísmica percibida en superficie para complementar la magnitud en aquellos terremotos históricos anteriores a 1910.
 
