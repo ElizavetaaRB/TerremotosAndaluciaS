@@ -16,6 +16,10 @@ ELSEIF YEAR([Fecha]) >= 1962 AND YEAR([Fecha]) < 2002 THEN "3. Red Analógica mb
 ELSE "4. Red Digital Sísmica Moderna (2002-2026)"
 END
 ```
+
+<div class='tableauPlaceholder' id='viz1788044671732' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;te&#47;terremotos_17880080596350&#47;DistribucindeEventosporRangodeMagnitudHomogneaenlaEraDigital&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='terremotos_17880080596350&#47;DistribucindeEventosporRangodeMagnitudHomogneaenlaEraDigital' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;te&#47;terremotos_17880080596350&#47;DistribucindeEventosporRangodeMagnitudHomogneaenlaEraDigital&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /></object></div>               
+
+
 ## 2. Distribución de Eventos por Rango de Magnitud ($M_w$) y Era
 
 Al desglosar los **87.420 registros** del catálogo según su nivel de magnitud ($M_w$) y la era instrumental del IGN, se observa claramente cómo la capacidad de detección ha cambiado la distribución de los datos registrados:
