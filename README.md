@@ -29,17 +29,17 @@ El análisis econométrico y de tendencias temporales revela que el incremento o
 
 La serie histórica global muestra un ajuste exponencial casi perfecto respecto al tiempo: $$\text{Recuento} = 8{,}973 \times 10^{-64} \cdot e^{0{,}0758416 \cdot \text{Año}}$$ 
 
-Bondad de ajuste ($R^2$): $0{,}953$ (explica el $95.3\%$ de la varianza histórica).
+- Bondad de ajuste ($R^2$): $0{,}953$ (explica el $95.3\%$ de la varianza histórica).
 
-Significatividad ($p\text{-valor}$): $< 0{,}0001$ (estadísticamente significativo al $99{,}9\%$).
+- Significatividad ($p\text{-valor}$): $< 0{,}0001$ (estadísticamente significativo al $99{,}9\%$).
 
 ### 2. Desglose por Niveles de Magnitud
 
-Sismos leves o no instrumentados ($M < 4$ o sin dato específico): Presentan una aceleración exponencial pronunciada en la curva de registro ($\text{Recuento} = 7{,}8527 \times 10^{-71} \cdot e^{0{,}0839 \cdot \text{Año}}$, $R^2 = 0{,}949$, $p < 0{,}0001$). Esto responde principalmente a la mejora de la red sísmica local e instalación de más sismógrafos en las últimas décadas, capturando microterremotos que antes pasaban desapercibidos.
+- Sismos leves o no instrumentados ($M < 4$ o sin dato específico): Presentan una aceleración exponencial pronunciada en la curva de registro ($\text{Recuento} = 7{,}8527 \times 10^{-71} \cdot e^{0{,}0839 \cdot \text{Año}}$, $R^2 = 0{,}949$, $p < 0{,}0001$). Esto responde principalmente a la mejora de la red sísmica local e instalación de más sismógrafos en las últimas décadas, capturando microterremotos que antes pasaban desapercibidos.
 
-Sismos moderados y mayor severidad ($M \ge 4$): El crecimiento temporal es significativamente más moderado ($\text{Recuento} = 3{,}0408 \times 10^{-26} \cdot e^{0{,}0309 \cdot \text{Año}}$, $R^2 = 0{,}598$, $p < 0{,}0001$).
+- Sismos moderados y mayor severidad ($M \ge 4$): El crecimiento temporal es significativamente más moderado ($\text{Recuento} = 3{,}0408 \times 10^{-26} \cdot e^{0{,}0309 \cdot \text{Año}}$, $R^2 = 0{,}598$, $p < 0{,}0001$).
 
-Conclusión Principal: Existe una mayor tasa de registro de eventos sísmicos impulsada por la densidad tecnológica de detección actual. El fenómeno responde a un incremento en el volumen de datos capturados (mayor resolución de medición) y no a una intensificación en la magnitud media de la actividad tectónica.
+- Conclusión Principal: Existe una mayor tasa de registro de eventos sísmicos impulsada por la densidad tecnológica de detección actual. El fenómeno responde a un incremento en el volumen de datos capturados (mayor resolución de medición) y no a una intensificación en la magnitud media de la actividad tectónica.
 
 
 
