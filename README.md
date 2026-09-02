@@ -7,14 +7,13 @@ Este proyecto analiza la localización, el historial y la frecuencia de los terr
 
 Mediante la limpieza de datos, la unificación toponímica de localidades en Tableau y la homogeneización matemática de magnitudes, el trabajo se organiza en tres secciones:
 
-1. Mapa de Terremotos: Muestra la ubicación exacta de los epicentros sobre el mapa para ver qué zonas concentran más actividad.
-        
+1. **Mapa de Terremotos (Capa Dual Adaptativa):** Muestra la ubicación exacta de los epicentros sobre el mapa. Adapta la métrica según la era del evento:
+   * **Sismicidad Moderna (Post-1910):** Mapeo por energía liberada mediante **Magnitud de Momento ($M_w$)**.
+   * **Sismicidad Histórica (Pre-1910):** Mapeo por severidad y daños en superficie mediante la **Escala de Intensidad Macrosísmica ($EMS\text{-}98 / MSK$)**, resolviendo la ausencia de magnitudes instrumentales en sismos antiguos.
 
-2.  Cantidad de Terremotos por Año: Una línea del tiempo que permite ver la evolución histórica y detectar en qué años ha habido más enjambres sísmicos.
-        
+2. **Cantidad de Terremotos por Año:** Una línea del tiempo interactiva que permite ver la evolución histórica y detectar en qué años se han producido enjambres sísmicos.
 
-3.  Tabla por Localidad: Una lista detallada con un buscador integrado para consultar en qué municipios ha temblado, qué magnitudes han tenido y cuántos terremotos se han producido en cada uno.
-
+3. **Tabla por Localidad:** Una lista detallada con un buscador integrado para consultar en qué municipios ha temblado, qué magnitudes se han registrado y cuántos terremotos se han producido en cada uno.
 ---        
 ## Principales Conclusiones del Estudio
 
@@ -35,8 +34,6 @@ Para profundizar en la metodología aplicada, puedes consultar los documentos es
 ## Líneas de Trabajo Futuras y Próximos Pasos
 
 Para evolucionar este estudio en fases posteriores, se proponen las siguientes mejoras técnicas:
-
-- Mapeo por Escala de Intensidad (EMS-98 / MSK): Diseñar una capa de visualización geográfica basada en la intensidad sísmica percibida en superficie para complementar la magnitud en aquellos terremotos históricos anteriores a 1910.
 
 - Filtro Estacional y De-clustering (Eliminación de Réplicas): Aplicar algoritmos de declustering (ej. método de Gardner-Knopoff) para separar los enjambres sísmicos y réplicas del flujo de sismicidad principal de fondo.
 
